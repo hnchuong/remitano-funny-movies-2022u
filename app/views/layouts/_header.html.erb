@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light nav-light-blue justify-content-between">
+<div class='container'>
+  <a class="navbar-brand fv-brand" href="/">
+    <%#= image_pack_tag 'media/images/open-iconic/svg/home.svg'%>
+    Funny Movies
+  </a>
+  <div class="actions">
+    <% unless signed_in? %>
+      <%= form_for(User.new, as: :user, url: user_session_path(:user), html: {class: 'form-inline form-signin-signup'}) do |f| %>
+          <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: 'username', class: 'form-control' %>
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: 'password', class: 'form-control' %>
+          <%= f.submit "Login", class: 'btn btn-primary' %>
+      <% end %>
+      <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-light' %>
+    <% else %>
+      <span class='welcome'>Welcome <%= current_user.username %></span>
+      <%#= link_to "Share a movie", new_video_path, class: 'btn btn-success' %>
+      <%#= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete}, class: 'btn btn-danger' %>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+    <% end %>
+  </div>
+</div>
+</nav>

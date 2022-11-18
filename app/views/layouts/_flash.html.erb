@@ -1,0 +1,7 @@
+<% if flash.present? %>
+  <%- flash.each do |type, msg|%>
+      <div class="<%= flash_css_class type %>">
+        <%= msg %>
+      </div>
+  <% end %>
+<% end %>
