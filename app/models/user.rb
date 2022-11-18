@@ -9,4 +9,8 @@ class User
   field :encrypted_password, type: String, default: ""
 
   include Mongoid::Timestamps
+
+  validates_presence_of :username, :encrypted_password
+  validates :username, format: { with: /\A[a-zA-Z0-9]+\Z/ }, uniqueness: true
+  index({ username: 1 }, { unique: true })
 end

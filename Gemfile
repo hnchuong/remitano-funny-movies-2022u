@@ -59,10 +59,14 @@ group :development, :test do
   gem "webdrivers"
 
   gem "rspec-rails"
-  gem "database_cleaner"
+  gem "database_cleaner-mongoid"
   gem "factory_bot_rails"
   gem "mongoid-rspec"
   gem "faker"
+  gem 'rails-controller-testing'
+
+  gem 'simplecov', require: false
+  gem 'capybara-screenshot'
 end
 
 group :development do
