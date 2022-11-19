@@ -13,8 +13,12 @@
   <body>
     <%= render partial: 'layouts/header'%>
     <div class="container">
-      <%= render partial: 'layouts/flash' %>
-      <%= yield %>
+      <div class="row">
+        <div class="column">
+          <%= render partial: 'layouts/flash' %>
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
