@@ -46,6 +46,8 @@ gem "mongoid"
 
 gem "devise"
 
+gem 'video_info'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

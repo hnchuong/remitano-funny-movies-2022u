@@ -11,4 +11,9 @@ import jquery from "jquery"
 window.jQuery = jquery
 window.$ = jquery
 
+$(function() {
+  localStorage.currentUser = $('body').data()['currentUser'];
+  localStorage.authToken = document.getElementsByName('csrf-token')[0].content;
+})
+
 import "./components/application";
