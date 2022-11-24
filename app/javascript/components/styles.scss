@@ -1,0 +1,136 @@
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons";
+@font-face {
+  font-family: "bootstrap-icons";
+  src: font-url("bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"),
+    font-url("bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+}
+
+
+.video-emb {
+  margin-right: 20px;
+}
+
+.video-info {
+  .like-actions {
+    font-size: 2.5em;
+  }
+}
+
+/*
+.btn-login {
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.container {
+
+  .btn-create-sharing {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .notice {
+    position: fixed;
+    width: 400px;
+    z-index: 999;
+    bottom: 0px;
+  }
+
+  .devise-login {
+    margin-top: 4rem;
+  }
+}
+
+#home {
+  margin-top: 2rem;
+
+  .share-content {
+    width: 65%;
+    margin: auto;
+    margin-bottom: 20px;
+
+    .share-description {
+      width: 60%;
+      float: right;
+
+      .share-description-title {
+        width: 80%;
+        float: left;
+      }
+
+      .share-description-vote {
+        width: 20%;
+        float: right;
+        min-height: 50px;
+
+        .bi-hand-thumbs-up {
+          font-size: 2rem;
+          width: 40%;
+          float: right
+        }
+
+        .bi-hand-thumbs-up-fill {
+          font-size: 2rem;
+          width: 100%;
+          text-align: center;
+        }
+
+        .bi-hand-thumbs-down {
+          font-size: 2rem;
+          width: 40%;
+          float: right;
+        }
+
+        .bi-hand-thumbs-down-fill {
+          font-size: 2rem;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .bi-hand-thumbs-up {
+      cursor: pointer;
+    }
+
+    .bi-hand-thumbs-down {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .embed-responsive {
+      float: left;
+      height: 180px;
+
+      .youtube-player {
+        float: left;
+
+      }
+    }
+
+    .embed-responsive-item {
+      height: 165px;
+      float: left;
+    }
+  }
+
+  .share-loadmore {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    float: left;
+  }
+}
+*/

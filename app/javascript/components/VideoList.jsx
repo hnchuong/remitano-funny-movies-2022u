@@ -1,6 +1,6 @@
 // import React from 'react';
 import React, { useState, useEffect } from "react";
-// import "./styles.css";
+import "./styles.scss";
 import Axios from "axios";
 import Video from './Video';
 import ShareVideo from "./ShareVideo";

@@ -28,7 +28,17 @@ function Video({ video }) {
     <div className="video d-flex flex-row">
       <div className="video-emb" dangerouslySetInnerHTML={{__html: video.embed_code}}/>
 
-      <div className="video-info">
+      <div className="video-info d-flex flex-wrap">
+        <div className="flex-grow-1">
+          <p className="title">{ video.title }</p>
+          <p className="user">Shared by { video.username }</p>
+          <p className="like-count">
+            { upCount }
+            <i className='bi-hand-thumbs-up'></i>
+            { downCount }
+            <i className='bi-hand-thumbs-down'></i>
+          </p>
+        </div>
         <div className='like-actions'>
           { (currentVote === null || currentVote === '') ?
             <div>
@@ -41,15 +51,7 @@ function Video({ video }) {
             </div>
           }
         </div>
-        <p className="title">{ video.title }</p>
-        <p className="like-count">
-          { upCount }
-          <i className='bi-hand-thumbs-up'></i>
-          { downCount }
-          <i className='bi-hand-thumbs-down'></i>
-        </p>
 
-        <p className="user">Shared by { video.username }</p>
         <div className="description-wrapper"><label>Description: </label>
           <div className="description">
             { video.description }
