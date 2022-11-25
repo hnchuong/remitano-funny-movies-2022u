@@ -25,21 +25,20 @@ function Video({ video }) {
   }
 
   return (
-    <div className="video d-flex flex-row">
+    <div className="video d-flex flex-row mb-3">
       <div className="video-emb" dangerouslySetInnerHTML={{__html: video.embed_code}}/>
-
-      <div className="video-info d-flex flex-wrap">
-        <div className="flex-grow-1">
+      <div className="video-info-wrapper d-flex flex-wrap p-3">
+        <div className="video-info">
           <p className="title">{ video.title }</p>
-          <p className="user">Shared by { video.username }</p>
+          <p className="user"><label>Shared by:</label> { video.username }</p>
           <p className="like-count">
             { upCount }
-            <i className='bi-hand-thumbs-up'></i>
+            <i className='bi-hand-thumbs-up me-2'></i>
             { downCount }
             <i className='bi-hand-thumbs-down'></i>
           </p>
         </div>
-        <div className='like-actions'>
+        <div className='like-actions d-flex justify-content-end'>
           { (currentVote === null || currentVote === '') ?
             <div>
               <i className='bi-hand-thumbs-up' onClick={handleVote(video.id, 'up')}/>

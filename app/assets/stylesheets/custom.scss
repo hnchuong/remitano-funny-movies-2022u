@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "bootstrap-icons";
+  src: font-url("bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"),
+    font-url("bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+}
+
+
+.video {
+  background-color: #ddd;
+}
+
+.video-info-wrapper {
+  background-color: #eee;
+  p {
+    line-height: 1em;
+  }
+  .video-info {
+    flex-basis: calc(100% - 95px);
+  }
+  .title {
+    color: darkred;
+    font-weight: bold;
+  }
+  .like-actions {
+    font-size: 2.5em;
+    flex-basis: 90px;
+  }
+  .description {
+    font-size: 0.8em;
+  }
+  label {
+    font-style: italic;
+    font-weight: bold;
+  }
+}
