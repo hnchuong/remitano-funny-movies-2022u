@@ -1,22 +1,26 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light nav-light-blue justify-content-between">
-<div class='container'>
+<div class='container header-wrapper'>
+<div class="row">
+<div class="col">
+<nav id="header" class="navbar navbar-expand-lg navbar-light nav-light-blue justify-content-between">
   <a class="navbar-brand fv-brand" href="/">
-    <%#= image_pack_tag 'media/images/open-iconic/svg/home.svg'%>
+    <i class='bi-camera-video'></i>
     Funny Movies
   </a>
-  <div class="actions">
+  <div class="actions d-flex align-items-center">
     <% unless signed_in? %>
-      <%= form_for(User.new, as: 'user', url: session_path('user')) do |f| %>
+      <%= form_for(User.new, as: 'user', url: session_path('user'), html: { id: 'login-box-header', class: 'd-flex justify-content-end'} ) do |f| %>
           <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: 'username', class: 'form-control' %>
           <%= f.password_field :password, autocomplete: "current-password", placeholder: 'password', class: 'form-control' %>
           <%= f.submit "Login", class: 'btn btn-primary' %>
       <% end %>
-      <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-light' %>
+      <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-outline-primary' %>
     <% else %>
-      <span class='welcome'>Welcome <%= current_user.username %></span>
-      <div id="share-movie"><div/>
+      <span class='welcome'>Welcome <strong><%= current_user.username %></strong></span>
       <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn btn-danger' %>
+      <div id="share-movie"></div>
     <% end %>
   </div>
 </div>
 </nav>
+</div>
+</div>

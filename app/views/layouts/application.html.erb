@@ -12,13 +12,9 @@
 
   <body data-current-user="<%= current_user&.username -%>">
     <%= render partial: 'layouts/header'%>
-    <div class="container">
-      <div class="row">
-        <div class="column">
-          <%= render partial: 'layouts/flash' %>
-          <%= yield %>
-        </div>
-      </div>
+    <div class="container body-wrapper">
+      <%= render partial: 'layouts/flash' %>
+      <%= yield %>
     </div>
   </body>
 </html>

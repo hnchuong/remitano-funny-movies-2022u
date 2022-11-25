@@ -3,9 +3,8 @@ import React, { useState, useRef } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
-import Axios from "axios";
 
-function ShareVideo({ children, handleSubmitVideo}) {
+function ShareVideo({ handleSubmitVideo}) {
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);

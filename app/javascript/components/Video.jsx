@@ -39,15 +39,17 @@ function Video({ video }) {
           </p>
         </div>
         <div className='like-actions d-flex justify-content-end'>
-          { (currentVote === null || currentVote === '') ?
-            <div>
-              <i className='bi-hand-thumbs-up' onClick={handleVote(video.id, 'up')}/>
-              <i className='bi-hand-thumbs-down' onClick={handleVote(video.id, 'down')}/>
-            </div> :
-            <div>
-              { (currentVote === 'up') && <i className='bi-hand-thumbs-up-fill'/> }
-              { (currentVote === 'down') && <i className='bi-hand-thumbs-down-fill'/> }
-            </div>
+          {  localStorage.currentUser !== '' &&
+            ((currentVote === null || currentVote === '') ?
+              <div>
+                <i className='bi-hand-thumbs-up' onClick={handleVote(video.id, 'up')}/>
+                <i className='bi-hand-thumbs-down' onClick={handleVote(video.id, 'down')}/>
+              </div> :
+              <div>
+                { (currentVote === 'up') && <i className='bi-hand-thumbs-up-fill'/> }
+                { (currentVote === 'down') && <i className='bi-hand-thumbs-down-fill'/> }
+              </div>
+            )
           }
         </div>
 

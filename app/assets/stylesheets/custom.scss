@@ -4,9 +4,29 @@
     font-url("bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
 }
 
+body {
+  background-color: #ddd;
+}
+
+.header-wrapper {
+  background-color: #eee;
+}
+
+.body-wrapper {
+  padding: 0;
+}
+
+#header {
+  .actions {
+    gap: 10px;
+  }
+  #login-box-header {
+    gap: 5px;
+  }
+}
 
 .video {
-  background-color: #ddd;
+  background-color: #eee;
 }
 
 .video-info-wrapper {

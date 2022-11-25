@@ -38,7 +38,7 @@ function VideoList() {
 
   return (
     <>
-      <ShareVideo handleSubmitVideo={ handleSubmitVideo }/>
+      {localStorage.currentUser !== '' && <ShareVideo handleSubmitVideo={ handleSubmitVideo }/>}
       {videos.map((video) => (
         <Video key={ video["id"] } video={ video }/>
       ))}
