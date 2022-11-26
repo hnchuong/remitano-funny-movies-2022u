@@ -17,7 +17,7 @@ function ShareVideo({ handleSubmitVideo}) {
   return ReactDOM.createPortal(
     <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      Share a movie
       </Button>
 
       <Modal show={show} onHide={handleClose}>
