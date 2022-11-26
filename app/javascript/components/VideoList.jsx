@@ -38,10 +38,13 @@ function VideoList() {
 
   return (
     <>
-      {localStorage.currentUser !== '' && <ShareVideo handleSubmitVideo={ handleSubmitVideo }/>}
-      {videos.map((video) => (
-        <Video key={ video["id"] } video={ video }/>
-      ))}
+      { localStorage.currentUser !== '' && <ShareVideo handleSubmitVideo={ handleSubmitVideo }/> }
+      {
+        (videos.length > 0) ?
+            (videos.map((video) =>
+              <Video key={ video["id"] } video={ video }/>)) :
+          <p>No movies are shared yet.</p>
+      }
     </>
 
   );
