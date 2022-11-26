@@ -20,7 +20,9 @@ class MoviesController < ApplicationController
     logger.info movie_params.inspect
     successful, message, movie = VideoInfoFetcher.perform(movie_params[:youtube_url], current_user)
     if successful
-      response_json(200, 'success', Movie.response_json(movie))
+      data = Movie.response_json(movie)
+      data[:current_vote] = movie.current_vote(current_user)
+      response_json(200, 'success', data)
     else
       response_json(406, message)
     end
